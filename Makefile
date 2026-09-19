@@ -1,5 +1,5 @@
 CXX ?= g++
-CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -Wpedantic
+CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -Wpedantic -pthread
 
 TARGET := jtool
 SOURCES := $(shell find core modules -type f -name '*.cpp')
@@ -13,4 +13,3 @@ $(TARGET): $(SOURCES)
 
 clean:
 	$(RM) $(TARGET)
-
